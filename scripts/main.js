@@ -9,6 +9,9 @@ cards_container.addEventListener("click",(event) => {
     if(event.target.textContent === "Remove") {
         event.target.parentElement.parentElement.parentElement.remove();
     }
+    if(event.target.textContent === "Edit") {
+        document.body.style.backgroundColor='gray';
+    }
 })
 
 function getUserInput(){

@@ -1,0 +1,17 @@
+html {
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+}
+
+#header {
+    border: 3px solid green;
+    height: 20%;
+}
+
+main {
+    display: flex;
+    border: 3px solid orange;
+    height: 75%;
+}

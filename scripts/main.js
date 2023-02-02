@@ -1,7 +1,7 @@
 //Form Submission Event:
 destination_form.addEventListener("submit",(event) => {
     event.preventDefault();
-    generateCard(getUserInput());
+    generateCard(getFormInput());
 });
 
 //Buttons on Cards:
@@ -10,11 +10,11 @@ cards_container.addEventListener("click",(event) => {
         event.target.parentElement.parentElement.parentElement.remove();
     }
     if(event.target.textContent === "Edit") {
-        document.body.style.backgroundColor='gray';
+        updateCard(event);
     }
 })
 
-function getUserInput(){
+function getFormInput(){
     //Store user input
     const userInput = {
     name: document.querySelector("#destination_name").value,
@@ -93,4 +93,21 @@ function makeBlankCard() {
     newCard.appendChild(cardBody);
 
     return newCard;
+}
+
+function updateCard(event) {
+    //Prompt user for input
+    const newName = prompt("What destination name should the destination be changed to?");
+    const newLocation = prompt("What location should the destination location be changed to?");
+    const newPhoto = prompt("What photo URL should the destination photo be changed to?");
+
+    // if(newName !== null && newName.length > 0) {
+
+    // }
+    // if(newName !== null && newName.length > 0) {
+
+    // }
+    // if(newName !== null && newName.length > 0) {
+        
+    // }
 }

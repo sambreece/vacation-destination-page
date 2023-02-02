@@ -26,3 +26,14 @@ main {
     border: 3px solid blue;
     width: 45%;
 }
+
+h3 {
+    border: 3px solid pink;
+    height: 10%;
+    margin: 0;
+}
+
+#card_container {
+    border: 3px solid yellow;
+    height: 88%;
+}

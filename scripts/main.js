@@ -96,18 +96,20 @@ function makeBlankCard() {
 }
 
 function updateCard(event) {
-    //Prompt user for input
+    const card = event.target.parentElement.parentElement.parentElement;
+    //Prompts user for input
     const newName = prompt("What destination name should the destination be changed to?");
     const newLocation = prompt("What location should the destination location be changed to?");
     const newPhoto = prompt("What photo URL should the destination photo be changed to?");
-
-    // if(newName !== null && newName.length > 0) {
-
-    // }
-    // if(newName !== null && newName.length > 0) {
-
-    // }
-    // if(newName !== null && newName.length > 0) {
-        
-    // }
+    
+    //Updates card
+    if(newName !== null && newName.length > 0) {
+        card.querySelector(".card-title").textContent = newName;
+    }
+    if(newLocation !== null && newLocation.length > 0) {
+        card.querySelector(".card-subtitle").textContent = newLocation;
+    }
+    if(newPhoto !== null && newPhoto.length > 0) {
+        card.querySelector(".card-img-top").setAttribute("src", newPhoto);
+    }
 }

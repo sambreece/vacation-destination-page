@@ -6,8 +6,9 @@ destination_form.addEventListener("submit",(event) => {
 
 //Buttons on Cards:
 cards_container.addEventListener("click",(event) => {
-    if(event.target.textContent === "Remove")
-    document.body.style.backgroundColor = 'gray';
+    if(event.target.textContent === "Remove") {
+        event.target.parentElement.parentElement.parentElement.remove();
+    }
 })
 
 function getUserInput(){

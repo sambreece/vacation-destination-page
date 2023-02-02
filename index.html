@@ -15,7 +15,33 @@
         <p>Welcome to our vacation destination page! Here, you can share and discover new pages to visit on your next trip. Simply fill out the form to submit your favorite vacation spot, and browse through the submissions to find your next adventure. Happy travels!</p>
     </section>
     <section id="main_body">
-        <article id="left_article">This is the left article. </article>
+        <article id="left_article">
+        <form action="">
+            
+            <div>
+                <label for="destination_name">Destination name</label>
+                <input required type="text" id="destination_name" placeholder="Enter destination name">
+            </div>
+            
+            <div>
+                <label for="destination_location">Location</label>
+                <input required type="text" id="destination_location" placeholder="Enter destination location">
+            </div>
+
+            <div>
+                <label for="destination_photo">Location</label>
+                <input type="text" id="destination_photo" placeholder="Enter URL for destination photo">
+            </div>
+
+            <div>
+                <label for="destination_description">Location</label>
+                <textarea type="text" name="destination_description" id="destination_description" placeholder="Enter a description of the destination"></textarea>
+            </div>
+            
+            <button type="submit">Add to List</button>
+
+        </form>
+        </article>
         <article id="right_article">This is the right article. </article>
     </section>
     <!--My JavaScript-->

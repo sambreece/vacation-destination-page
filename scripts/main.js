@@ -4,6 +4,12 @@ destination_form.addEventListener("submit",(event) => {
     generateCard(getUserInput());
 });
 
+//Buttons on Cards:
+cards_container.addEventListener("click",(event) => {
+    if(event.target.textContent === "Remove")
+    document.body.style.backgroundColor = 'gray';
+})
+
 function getUserInput(){
     //Store user input
     const userInput = {
@@ -21,7 +27,6 @@ function getUserInput(){
     return userInput;
 }
 
-
 function generateCard (userInput) {
     const newCard = makeBlankCard();
     newCard.querySelector(".card-title").textContent = userInput.name;
@@ -35,8 +40,6 @@ function generateCard (userInput) {
     }
     cards_container.appendChild(newCard);
 }
-
-
 
 function makeBlankCard() {
     const newCard = document.createElement("div");
